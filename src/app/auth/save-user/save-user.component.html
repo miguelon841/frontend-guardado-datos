@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Registro de usuarios</h2>
+
+    <form #frmSaveUser="ngForm" (ngSubmit)="onSaveUser(frmSaveUser)" class="login-container" >
+      <p>
+        <input type="text" name="name" placeholder="name" ngModel required>
+      </p>
+      <p>
+        <input type="date" name="dateBirth" placeholder="date of Birth" ngModel required>
+      </p>
+      <p>
+        <input type="email" name="email" placeholder="Email" ngModel required>
+      </p>
+      <p>
+        <input type="text" name="tel" placeholder="tel" ngModel required>
+      </p> 
+      <p>
+        <canvas #canvas width="300" height="200"></canvas>
+      </p>
+      <p>
+        <input type="submit" value="Registrar">
+      </p>
+    </form>
+  </div>
+</div>

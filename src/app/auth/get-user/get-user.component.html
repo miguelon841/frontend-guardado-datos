@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="login">
+      <div class="login-triangle"></div>
+  
+      <h2 class="login-header">Consulta de usuario</h2>
+  
+      <form #frmGetUser="ngForm" (ngSubmit)="onGetUser(frmGetUser)" class="login-container" >
+        <p>
+          <input type="email" name="email" placeholder="Email" ngModel required>
+        </p>
+        <p>
+          <input type="text" name="tel" placeholder="tel" ngModel required>
+        </p>
+        <p>
+          <input type="submit" value="Consultar">
+        </p>
+      </form>
+      <form *ngIf="showMyContainer" #frmSaveUser="ngForm"  class="login-container" >
+        <p>
+          <input [(ngModel)]="name" type="text" name="name" placeholder="name" ngModel readonly>
+        </p>
+        <p>
+          <input [(ngModel)]="dateBirth" type="text" name="dateBirth" placeholder="date of Birth" ngModel readonly>
+        </p>
+        <p>
+          <input [(ngModel)]="email" type="email" name="email" placeholder="Email" ngModel readonly>
+        </p>
+        <p>
+          <input [(ngModel)]="tel" type="text" name="tel" placeholder="tel" ngModel readonly>
+        </p> 
+        <p>
+          <img [src]="sign" width="300" height="200" style="background-color: white;" />
+        </p>     
+      </form>
+    </div>   
+  </div>
